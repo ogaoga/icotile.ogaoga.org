@@ -1,4 +1,4 @@
-import router from 'next/router';
+import { useRouter } from 'next/router';
 
 import { AppConfig } from '../utils/AppConfig';
 
@@ -7,6 +7,7 @@ type ILogoProps = {
 };
 
 const Logo = (props: ILogoProps) => {
+  const router = useRouter();
   const fontStyle = props.xl
     ? 'font-semibold text-3xl'
     : 'font-semibold text-xl';
