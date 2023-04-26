@@ -3,7 +3,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
-const prefixPath = '/icotile.ogaoga.org';
+// const prefixPath = '/icotile.ogaoga.org';
+const prefixPath = '';
 
 module.exports = withBundleAnalyzer({
   poweredByHeader: false,
