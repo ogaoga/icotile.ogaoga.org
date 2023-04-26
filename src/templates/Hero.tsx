@@ -29,12 +29,12 @@ const Hero = () => (
       />
       <img
         className="sm:w-full md:w-1/2 mx-auto"
-        src="/img/main.png"
+        src={`${process.env.prefixPath}/img/main.png`}
         alt="Screen capture of icotile for Web"
       />
       <img
         className="sm:w-full md:w-1/2 mx-auto"
-        src="/img/icotile-iphone-ipad.png"
+        src={`${process.env.prefixPath}/img/icotile-iphone-ipad.png`}
         alt="iPhone and iPad apps"
       />
     </Section>
