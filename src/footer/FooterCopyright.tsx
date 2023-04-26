@@ -1,12 +1,16 @@
-import { AppConfig } from '../utils/AppConfig';
-
 const FooterCopyright = () => (
   <div className="footer-copyright">
-    © Copyright {new Date().getFullYear()} {AppConfig.title}. Powered with{' '}
-    <span role="img" aria-label="Love">
-      ♥
-    </span>{' '}
-    by <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>
+    <div className="text-base mb-4">
+      © Copyright 2011 - 2023 <a href="https://ogaoga.org/">ogaoga.org</a>
+    </div>
+    <div>
+      Powered with&nbsp;
+      <span role="img" aria-label="Love">
+        ♥
+      </span>
+      &nbsp; by{' '}
+      <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>
+    </div>
     {/*
      * PLEASE READ THIS SECTION
      * We'll really appreciate if you could have a link to our website
