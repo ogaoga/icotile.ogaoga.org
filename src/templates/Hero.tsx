@@ -1,3 +1,5 @@
+import router from 'next/router';
+
 import { Background } from '../background/Background';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
@@ -29,12 +31,12 @@ const Hero = () => (
       />
       <img
         className="sm:w-full md:w-1/2 mx-auto"
-        src={`${process.env.prefixPath}/img/main.png`}
+        src={`${router.basePath}/img/main.png`}
         alt="Screen capture of icotile for Web"
       />
       <img
         className="sm:w-full md:w-1/2 mx-auto"
-        src={`${process.env.prefixPath}/img/icotile-iphone-ipad.png`}
+        src={`${router.basePath}/img/icotile-iphone-ipad.png`}
         alt="iPhone and iPad apps"
       />
     </Section>

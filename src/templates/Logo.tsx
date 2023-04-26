@@ -1,3 +1,5 @@
+import router from 'next/router';
+
 import { AppConfig } from '../utils/AppConfig';
 
 type ILogoProps = {
@@ -12,7 +14,7 @@ const Logo = (props: ILogoProps) => {
   return (
     <span className={`text-gray-900 inline-flex items-center ${fontStyle}`}>
       <img
-        src={`${process.env.prefixPath}/img/icotile360.png`}
+        src={`${router.basePath}/img/icotile360.png`}
         alt={AppConfig.site_name}
         width={32}
         height={32}
