@@ -1,7 +1,4 @@
-import Link from 'next/link';
-
 import { Background } from '../background/Background';
-import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
@@ -11,16 +8,7 @@ const Hero = () => (
   <Background color="bg-gray-100">
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
-        <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            <a>GitHub</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a>Sign in</a>
-          </Link>
-        </li>
+        <></>
       </NavbarTwoColumns>
     </Section>
 
@@ -28,18 +16,26 @@ const Hero = () => (
       <HeroOneButton
         title={
           <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
+            <span className="text-xl">
+              {'Twitter Friends and Lists Manager\n'}
+            </span>
+            <span className="text-primary-500">
+              <b>icotile</b>
+            </span>
           </>
         }
-        description="The easiest way to build a React landing page in seconds."
-        button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
-            <a>
-              <Button xl>Download Your Free Theme</Button>
-            </a>
-          </Link>
-        }
+        description="icotile has been terminated in March 2023. Until then, 82,690 twitter accounts have used the app since 2011. Thank you for using!"
+        button={undefined}
+      />
+      <img
+        className="sm:w-full md:w-1/2 mx-auto"
+        src="/img/main.png"
+        alt="Screen capture of icotile for Web"
+      />
+      <img
+        className="sm:w-full md:w-1/2 mx-auto"
+        src="/img/icotile-iphone-ipad.png"
+        alt="iPhone and iPad apps"
       />
     </Section>
   </Background>
