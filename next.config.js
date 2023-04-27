@@ -4,7 +4,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 // const prefixPath = '/icotile.ogaoga.org';
-const prefixPath = '';
+const prefixPath = undefined;
 
 module.exports = withBundleAnalyzer({
   poweredByHeader: false,
