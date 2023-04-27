@@ -75,8 +75,13 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Clean up 
         run: ${{ steps.detect-package-manager.outputs.runner }} rimraf .next out
+      - name: Create .env
+        run: |
+          touch .env
+          echo "NEXT_PUBLIC_ADSENSE_ID=${{ vars.NEXT_PUBLIC_ADSENSE_ID }}" >> .env
+          echo "NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID }}" >> .env
       - name: Build with Next.js
-        run: NEXT_PUBLIC_ADSENSE_ID=${{ vars.NEXT_PUBLIC_ADSENSE_ID }} NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID }} ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
