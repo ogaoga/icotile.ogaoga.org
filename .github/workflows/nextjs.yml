@@ -80,8 +80,8 @@ jobs:
           touch .env
           echo "${{ vars.NEXT_PUBLIC_GA_ID }}"
           echo "NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID }}" >> .env
-          echo "${{ vars.NEXT_PUBLIC_ADSENSE_ID }}"
-          echo "NEXT_PUBLIC_ADSENSE_ID=${{ vars.NEXT_PUBLIC_ADSENSE_ID }}" >> .env
+          echo "${{ vars.NEXT_PUBLIC_AD_ID }}"
+          echo "NEXT_PUBLIC_ADSENSE_ID=${{ vars.NEXT_PUBLIC_AD_ID }}" >> .env
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
