@@ -16,7 +16,7 @@ const Hero = () => {
         </NavbarTwoColumns>
       </Section>
 
-      <Section yPadding="pt-20 pb-32">
+      <Section yPadding="pt-8 pb-32">
         <HeroOneButton
           title={
             <>
@@ -28,7 +28,10 @@ const Hero = () => {
               </span>
             </>
           }
-          description="icotile has been terminated in March 2023. Until then, 82,690 twitter accounts have used the app since 2011. Thank you for using!"
+          descriptions={[
+            'icotile has been terminated in March 2023. Until then, 82,690 twitter accounts have used the app since 2011. Thank you for using!',
+            'icotile（アイコタイル）は 2023年3月にサービス終了しました。2011年のサービス開始以来、82,690 アカウントのご利用がありました。ご利用ありがとうございました！',
+          ]}
           button={undefined}
         />
         <img

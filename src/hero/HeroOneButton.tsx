@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 type IHeroOneButtonProps = {
   title: ReactNode;
-  description: string;
+  descriptions: string[];
   button: ReactNode;
 };
 
@@ -11,8 +11,15 @@ const HeroOneButton = (props: IHeroOneButtonProps) => (
     <h1 className="text-5xl text-gray-600 whitespace-pre-line leading-hero">
       {props.title}
     </h1>
-    <div className="text-2xl mt-4 mb-16">{props.description}</div>
-
+    <div className="mb-16">
+      {props.descriptions.map((desc, index) => {
+        return (
+          <div key={index} className="text-2xl mt-4">
+            {desc}
+          </div>
+        );
+      })}
+    </div>
     {props.button}
   </header>
 );
